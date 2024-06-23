@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/houdini_assign_materials.iml" filepath="$PROJECT_DIR$/.idea/houdini_assign_materials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../houdini_python_projects/.idea/houdini_python_projects.iml" filepath="$PROJECT_DIR$/../houdini_python_projects/.idea/houdini_python_projects.iml" />
     </modules>
   </component>
 </project>
