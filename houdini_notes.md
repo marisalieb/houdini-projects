@@ -1,4 +1,8 @@
-houdini python videos notes
+# Houdini python course NOTES
+
+### General
+
+<     # is replaced by <# in theses notes
 
 - if you write in the python source editor you need the python shell to see it executed like eg. print statement 
 
@@ -23,7 +27,7 @@ print(box.asCode())
 
 
 
-Python data types in Houdini
+### Python data types in Houdini
 
 - numbers; integrers, floats, complex numbers; this print(type(10)) return the class of number in this case integer, 10.2 would be float, 2+5j would be complex 
 
@@ -44,16 +48,16 @@ Python data types in Houdini
 - variables can be used to store information like a = 10, can be numbers, strings ; just have to define a value like myString = 'this is a string'
 
 
-Numbers in Houdini (more indepth):
+### Numbers in Houdini (more indepth):
 
 - assigning variables x and y and using them with operator basics - addition +, subtraction -, multiplication *, division /, exponentation **, modulo (remainder) %
 
 Like this in a new shelf tool:
-# assigning variables
+<# assigning variables
 x = 6
 y = 10
 
-# operator basics -  +,  -,  *,  /, **, 
+<# operator basics -  +,  -,  *,  /, **, 
 print(y % x)
 
 
@@ -75,38 +79,38 @@ print(y % x)
 
 Using numbers in Houdini with Python (use this basic script):
 
-# basic example of using numbers with Houdini hou
+<# basic example of using numbers with Houdini hou
 import hou
 
 #getting the obj context, so basic object/node tree window
 obj = hou.node('/obj')
 
-# create a geo node in /obj
+<# create a geo node in /obj
 myGeo = obj.createNode('geo', 'Geeo')
-# the obj in this stands for the obj = defined above
+<# the obj in this stands for the obj = defined above
 
-# create a box inside of myGeo
+<# create a box inside of myGeo
 box = myGeo.createNode('box', 'Boxx')
 
-# create variables to use
+<# create variables to use
 height = 1
 width = 4
 depthh =6
 
-# assigning variable to box parameters
+<# assigning variable to box parameters
 box.parm('sizex').set(width)
 box.parm('sizey').set(height)
 box.parm('sizez').set(depthh)
-# if you want to get the parameter names like sizex, hover over the printed name in paramter window
+<# if you want to get the parameter names like sizex, hover over the printed name in paramter window
 
-# assigning an expression to the box parameter like center of y (name: ty)
+<# assigning an expression to the box parameter like center of y (name: ty)
 box.parm('ty').set(height/2)
 
 
 
 
 
-Using strings in Houdini with Python:
+### Using strings in Houdini with Python:
 
 - can use multi-line string like this >
 """
@@ -169,7 +173,7 @@ import hou
 #get the currently selected node
 node = hou.selectedNodes()[0]
 
-# get name of selected node
+<# get name of selected node
 name = node.name()
 
 #rename with prefix
@@ -203,10 +207,7 @@ node.setName(nameCaseFix)
 print(name)
 
 
-
-
-
-Lists in Houdini:
+### Lists in Houdini:
 
 #create a list of numbers, strings, mixed datat types, etc.
 
@@ -257,7 +258,7 @@ print(selected)
 
 
 
-Condition Statements:
+### Condition Statements:
 
 - there are true/false statements, then only are executed if something is true/false
 
@@ -312,7 +313,7 @@ else:
 
 
 
-Loops:
+### Loops:
 
 - for loops: takes a list or object that has a range of items/values like numbers in a list
 you can create a new item with a for loop so >
@@ -364,7 +365,7 @@ for node in selection:
 
 
 
-Functions:
+### Functions:
 
 - you are creating a blueprint of something to do
 
@@ -424,7 +425,7 @@ stage 1, gives you the file names of the textures you want to apply
 import hou
 import os #acces to operating system
 
-# you need an argument for a path and a material since i defined a path
+<# you need an argument for a path and a material since i defined a path
 def apply_textures(path, material):
     files = os.listdir(path) #this will go to where we specified the path below and list every object/file in there
     for image in files:
@@ -444,7 +445,7 @@ stage 2, if you have differnt file formats for the same textur map like jpg and 
 import hou
 import os #acces to operating system
 
-# you need an argument for a path and a material since i defined a path
+<# you need an argument for a path and a material since i defined a path
 def apply_textures(path, material):
     files = os.listdir(path) #this will go to where we specified the path below and list every object/file in there
     for image in files:
@@ -481,7 +482,7 @@ apply_textures(path, material) # need this line to call the function, everything
 
 
 
-Classes and Windows:
+### Classes and Windows:
 
 - example code with explanations >
 
