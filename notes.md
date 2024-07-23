@@ -1,5 +1,7 @@
 # Houdini python course NOTES
 
+these are just some notes from a python in houdini course
+
 ### General
 
 <     # is replaced by <# in theses notes

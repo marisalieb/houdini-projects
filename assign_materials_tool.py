@@ -29,7 +29,7 @@ def apply_textures(path, material):
 
 
 material = hou.selectedNodes()[0] #you need a list, so even if just one object is selected you get a list and select the first item in the list with [0]
-path = ('D:/Git/tutorial_materials/textures') # insert in () the pathway to a material file on your pc, IMPORTANT here: make sure the slashes / are this way round
+path = 'D:/Git/tutorial_materials/textures' # insert in () the pathway to a material file on your pc, IMPORTANT here: make sure the slashes / are this way round
 apply_textures(path, material) # need this line to call the function, everything previous is just the blueprint but you still need to call the function
 
 #end stage 2

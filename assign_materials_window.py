@@ -35,25 +35,4 @@ def getHoudiniMainWindow():
 class CreateWindow(ps.QtWidgets.QDialog):
     def __init__(self, parent=getHoudiniMainWindow()):
 
-    # initialise the create window
-    super(CreateWindow, self).__init__(parent)
 
-    # window settings
-    self.setWindowTitle('Assign Textures Window')
-    self.setMinimumSize(300, 80)
-    self.setWindow(self.windowFlags() ^ ps.QtCore.Qt.WindowContextHelpButtonHint)
-
-    # Window element creation
-    self.createWidgets()
-    self.createLayouts()
-    self.createConnections()
-
-    # first  method that's custom to the class here
-    def createWidgets(self):
-
-    # create pyside window widgets
-
-    # widgets to get folder path
-    self.texturePathLineEdit = ps.QtWidgets.QLineEdit()
-    self.texturePathButton = hou.qt.FileChooserButton()
-    self.textureButton = ps.QtWidgets.QPushButton('Assign Textures')
